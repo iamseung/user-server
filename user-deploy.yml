@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: user-container
-          image: 905418310587.dkr.ecr.ap-northeast-2.amazonaws.com/user-server:0.0.2
+          image: 905418310587.dkr.ecr.ap-northeast-2.amazonaws.com/user-server:0.0.3
           env:
               - name: SPRING_PROFILES_ACTIVE
                 value: dev
@@ -30,10 +30,10 @@ spec:
           resources:
             requests:
               memory: "512Mi"
-              cpu: "500m"
+              cpu: "300m"
             limits:
               memory: "1Gi"
-              cpu: "1000m"
+              cpu: "600m"
           lifecycle:
             preStop:
               exec:
